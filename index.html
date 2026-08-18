@@ -32,10 +32,11 @@
   .logo {
     display: inline-flex; align-items: center; justify-content: center;
     width: 60px; height: 60px; border-radius: 18px;
-    background: linear-gradient(135deg, #ff9a6c, #ff7a45);
-    font-size: 32px; box-shadow: 0 10px 24px -10px rgba(255,122,69,.6);
+    overflow: hidden; background: transparent;
+    box-shadow: 0 10px 24px -10px rgba(255,122,69,.6);
     margin-bottom: 14px;
   }
+  .logo img { display: block; width: 100%; height: 100%; object-fit: cover; }
   h1 { font-size: 24px; margin: 0 0 6px; font-weight: 800; }
   .sub { color: var(--ink500); font-size: 13px; margin: 0; }
   .meta {
@@ -77,19 +78,22 @@
 <body>
   <div class="wrap">
     <header>
-      <div class="logo">🍑</div>
+      <!-- 官网品牌图由 assets/brand/icon_alpha.png 统一生成，与当前 APP 启动 ICON 保持一致。 -->
+      <div class="logo">
+        <img src="https://taotao.zhanglulu.com.cn/assets/images/taotao-logo.png" alt="桃桃记账 App 图标" />
+      </div>
       <h1>桃桃记账 · 隐私政策</h1>
       <p class="sub">本地优先，按需授权</p>
     </header>
 
     <div class="meta">
       <div class="meta-row">
-        <span><b>运营主体：</b>个人开发者</span>
+        <span><b>运营主体：</b>济南云端启航科技信息有限公司</span>
         <span><b>联系邮箱：</b>1072254416@qq.com</span>
       </div>
       <div class="meta-row" style="margin-top:6px">
-        <span><b>政策版本：</b>v2026.08.15</span>
-        <span><b>生效日期：</b>2026 年 8 月 15 日</span>
+        <span><b>政策版本：</b>v2026.08.18</span>
+        <span><b>生效日期：</b>2026 年 8 月 18 日</span>
       </div>
     </div>
 
@@ -103,6 +107,11 @@
         <li>微信登录为可选，仅用于会员权益，本地记账无需登录；默认不会上传你的账本数据，也无广告追踪。会员可主动开启加密云备份，把账本备份加密后存到腾讯云（见「可选会员云备份」）。</li>
         <li>你同意隐私政策后，App 会自动更新检查；仅发送平台、App 版本、Build、随机安装实例 ID、机型、厂商、品牌、系统版本、Android API 级别和 locale，不读取硬件 ID，更新检查本身不涉及账本内容。</li>
       </ul>
+    </section>
+
+    <section>
+      <h2>运营主体与联系我们</h2>
+      <p>桃桃记账由济南云端启航科技信息有限公司运营。本公司负责本政策项下的个人信息处理活动。如对本隐私政策或个人信息处理有任何疑问、意见或投诉，可通过邮箱 <a href="mailto:1072254416@qq.com" style="color:var(--accent);text-decoration:none">1072254416@qq.com</a> 与我们联系。</p>
     </section>
 
     <section>
@@ -175,14 +184,9 @@
       <p>桃桃记账默认不会主动向开发者服务器上传用户账本数据。可选的微信登录会把微信昵称、头像 URL、openid/unionid 和业务登录态发送给桃桃服务端（境内），用于会员权益绑定，但不包含任何账本数据。会员云备份的加密密文存储在腾讯云对象存储 COS 北京地域（境内），不传输到境外服务器；家庭服务器只保存账号、备份元数据和加密托管密钥，不接收备份正文。</p>
     </section>
 
-    <section>
-      <h2>联系我们</h2>
-      <p>如对本隐私政策有任何疑问，可通过邮箱 <a href="mailto:1072254416@qq.com" style="color:var(--accent);text-decoration:none">1072254416@qq.com</a> 与我们联系。</p>
-    </section>
-
     <footer>
-      桃桃记账 · 隐私政策 v2026.08.15<br />
-      生效日期：2026 年 8 月 15 日
+      桃桃记账 · 隐私政策 v2026.08.18<br />
+      生效日期：2026 年 8 月 18 日
     </footer>
   </div>
 </body>
